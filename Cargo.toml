@@ -1,0 +1,17 @@
+[package]
+name = "nwd1-quic"
+version = "0.1.0"
+edition = "2024"
+description = "QUIC transport for nwd1 binary frames."
+authors = ["ilker.arabaci@hotmail.com"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/iadev09/nwd1-quic"
+keywords = ["quic", "transport", "frame", "protocol", "network"]
+categories = ["network-programming"]
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+quinn = "0.11"
+bytes = "1"
+nwd1 = "0.1"
+netid64 = "0.1"
