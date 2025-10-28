@@ -7,7 +7,6 @@
 //! providing async send/receive helpers for bidirectional streams.
 
 use bytes::BytesMut;
-use netid64::NetId64;
 use nwd1::{Frame, MAGIC, decode, encode};
 use quinn::{RecvStream, SendStream};
 
@@ -81,6 +80,7 @@ pub async fn recv_frame(stream: &mut RecvStream) -> Result<Option<Frame>, std::i
 /// Minimal self-test to ensure the functions compile and link.
 #[cfg(test)]
 mod tests {
+	use netid64::NetId64;
     use super::*;
     use bytes::Bytes;
 
